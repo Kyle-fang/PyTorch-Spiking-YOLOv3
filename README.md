@@ -14,7 +14,7 @@ For spiking implementation, some operators in YOLOv3-Tiny have been converted eq
 Please refer to [ultralytics/yolov3](https://github.com/ultralytics/yolov3) for the basic usage for training, evaluation and inference. The main advantage of PyTorch-Spiking-YOLOv3 is the transformation from ANN to SNN.
 ### Train
 ```
-$ python3 train.py --batch-size 32 --cfg cfg/yolov3-tiny-ours.cfg --data data/coco.data --weights ''
+$ python3 train.py --batch-size 32 --cfg cfg/yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg --data data/coco.data --weights ''
 ```
 ### Test
 ```
