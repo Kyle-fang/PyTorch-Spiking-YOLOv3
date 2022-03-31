@@ -14,19 +14,19 @@ For spiking implementation, some operators in YOLOv3-Tiny have been converted eq
 Please refer to [ultralytics/yolov3](https://github.com/ultralytics/yolov3) for the basic usage for training, evaluation and inference. The main advantage of PyTorch-Spiking-YOLOv3 is the transformation from ANN to SNN.
 ### Train
 ```
-$ python3 train.py --batch-size 32 --cfg cfg/yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg --data data/coco.data --weights ''
+python3 train.py --batch-size 32 --cfg cfg/yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg --data data/coco.data --weights ''
 ```
 ### Test
 ```
-$ python3 test.py --cfg cfg/yolov3-tiny-ours.cfg --data data/coco.data --weights weights/best.pt --batch-size 32 --img-size 640
+python3 test.py --cfg cfg/yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg --data data/coco.data --weights weights/best.pt --batch-size 32 --img-size 640
 ```
 ### Detect
 ```
-$ python3 detect.py --cfg cfg/yolov3-tiny-ours.cfg --weights weights/best.pt --img-size 640
+python3 detect.py --cfg cfg/yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg --weights weights/best.pt --img-size 640
 ```
 ### Transform
 ```
-$ python3 ann_to_snn.py --cfg cfg/yolov3-tiny-ours.cfg --data data/coco.data --weights weights/best.pt --timesteps 128
+python3 ann_to_snn.py --cfg cfg/yolov3-tiny-mp2conv-mp1none-lk2relu-up2tconv.cfg --data data/coco.data --weights weights/best.pt --timesteps 128
 ```
 For higher accuracy(mAP), you can try to adjust some hyperparameters.
 
